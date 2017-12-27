@@ -1,0 +1,157 @@
+$(document).ready(function(){                
+var articulos=	document.querySelectorAll(".Productos");
+var hover = document.querySelectorAll(".hover");
+var imagenes=	document.querySelectorAll(".imagenes");    
+var imagen=1;
+var imagen_principal;
+var imagenes_en_movimiento;
+var actuador;
+
+
+$("article img + img").css("display", "none");	
+
+for(var i= 0; i < articulos.length ; i++){
+	var id_articulos = i;
+	id_articulos.toString();
+	$(articulos[i]).attr("id", id_articulos);
+   }
+
+for(var img = 0; img < imagenes.length; img++){
+	var id_imagenes = img;
+	id_imagenes.toString();
+	id_imagenes= "0" + id_imagenes; 
+	$(imagenes[img]).attr("id", id_imagenes);
+}
+
+for(var a = 0; a < hover.length; a++){
+	var id_hover = "1." + a;
+	id_hover.toString();
+	$(hover[a]).attr("id", id_hover);
+	articulos[a].addEventListener("mouseover", muestras, false);
+	articulos[a].addEventListener("mouseout", predeterminado, false);
+	
+}
+//
+//
+	 
+//
+function muestras(e){
+	imagen=1;
+//alert("enrtro en la funcion");
+	for(var oh= 0; oh < imagenes.length; oh += 3){
+		actuador =  "0" + oh;
+		actuador.toString();
+		
+		if(e.target.id == actuador){
+		
+			imagenes_en_movimiento= "#" + actuador;
+			imagen_principal = imagenes_en_movimiento;
+		timer();
+			break;
+		}
+	}
+	  
+	
+	function timer(){
+		//alert("entro en el timer");
+		 
+	if(imagen== 1){
+		 	
+			 //setTimeout(function(){delay()},2000);
+			//function delay(){
+
+				$(imagenes_en_movimiento).css("display","inline-block");
+			 	imagen=2;
+			
+			//}
+		}else if(imagen==0){
+			// alert("entro en la 0");
+				$(imagenes_en_movimiento).css("display","none");
+				imagenes_en_movimiento = imagen_principal;
+				$(imagenes_en_movimiento).css("display", "inline-block");
+				imagen= 2;
+				
+		}else if(imagen == 2){
+	
+			 //alert("entro en la 2");
+			$(imagen_principal).css("display", "none");
+			imagenes_en_movimiento= imagenes_en_movimiento + " img";
+			$(imagenes_en_movimiento).css("display", "inline-block");
+			 imagen= 3;	
+			
+		}else if(imagen == 3){
+			// alert("entro en la 3");
+			$(imagenes_en_movimiento).css("display", "none");
+			imagenes_en_movimiento = imagenes_en_movimiento + " + img";
+			$(imagenes_en_movimiento).css("display", "inline-block");	
+			 imagen= 0;
+			
+		}
+		
+	}
+	
+	
+}
+
+	
+	function predeterminado(){	
+		clearInterval(lapso);
+			$(imagen_principal).css("display","inline-block");
+			imagen = 1;
+
+		//  alert("entro");
+			
+		/*for(var o= 0; o < imagenes.length; o++){
+		imagenes_en_movimiento= "0" + o;
+		imagenes_en_movimiento.toString();
+
+		if(e.target.id == imagenes_en_movimiento){
+
+			imagenes_en_movimiento= "#" + imagenes_en_movimiento;
+			finalizar();
+			break;
+		}
+	}
+
+		function finalizar(){
+
+		}*/
+
+			
+	}
+	/*function cambio2(){
+		$(actuador).attr("src","imagenes/Ejemplos_Pad/2.png");
+		if(contador== 0){
+			$(actuador).attr("src", "imagenes/Ejemplos_Pad/1.png");
+		
+			}
+			
+		}
+
+	function cambio3(){
+		$(actuador).attr("src","imagenes/Ejemplos_Pad/3.png");
+		if(contador== 0){
+			$(actuador).attr("src", "imagenes/Ejemplos_Pad/1.png");	
+			
+			}
+		
+	}
+
+
+	function cambio1(){
+		$(actuador).attr("src","imagenes/Ejemplos_Pad/1.png");
+		if(contador== 0){
+			$(actuador).attr("src", "imagenes/Ejemplos_Pad/1.png");	
+			
+		}else{
+			timer()	
+			
+		}
+	}*/
+
+
+
+	
+});
+	
+

@@ -1,0 +1,11 @@
+<?php
+while($resultado= mysqli_fetch_row($consulta)){ 
+echo "<table border='1' width='50%' align=\"center\" > <tr><td>";
+echo $resultado[0] . "</td><td> ";
+echo $resultado[1] . " </td><td>";
+echo $resultado[2] . " </td><td>";
+echo $resultado[3] . " </td><td>";
+echo $resultado[4] . " </td><td>";
+echo $resultado[5] . " </td><td>";
+echo $resultado[6] . "</td> </tr> </table>  <br>";
+?>

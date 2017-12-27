@@ -1,0 +1,93 @@
+/* CSS Document */
+
+body{
+	color:#000000;
+}
+div{
+	position:fixed;
+	top: 0px;
+	left:27%;
+	background-image: url(imagenes/H1.gif);
+	width:600px;
+	height:100px;
+	box-sizing:border-box;
+}
+h1{
+	font-size:35px;
+	font-family: blazed;
+	margin-left:90px;
+	margin-top:25px;
+	transition:all 0.5s ease;
+}
+
+form{
+	position:fixed;
+	top:100px;
+	left: 30%;
+	width:500px;
+	height:auto;
+	padding-top:10px;
+	padding-bottom:10px;
+	border:2px solid #00FF33;
+	box-shadow:0px 0px 30px #00FF33;
+	background:#660099;
+	transition:all 0.5s linear;
+}
+
+
+
+input{
+	box-shadow:0px 0px 10px #fff;
+	border:none;
+	margin-left:50px;
+	box-sizing:border-box;
+
+}
+
+label{
+	margin:10px;
+	color:#FFFFFF;
+	font-size: 18px;	
+}
+	
+select{
+	box-shadow: 0px 0px 10px #fff;
+	margin-left: 50px;
+}
+
+.alinear {
+	margin-left:10px;
+}
+.alinearlo{
+	margin-left:5px;
+}
+
+#enviar{
+	margin-top:15px;
+	display:block;
+	border:none;
+	width:400px;
+}
+
+#enviar:hover{
+	box-shadow:0px 0px 10px #0099CC;
+	-webkit-transition: all .3s ease;
+}
+
+input:focus{
+	box-shadow:0px 0px 10px #0099CC;
+	-webkit-transition: all .3s ease;
+
+}
+
+a{
+	color:#FF0000;
+	font-size:18px;
+	margin-left:35%;
+}
+
+a:visited{
+	-webkit-transition: all 0.5s ease;
+	
+
+}
