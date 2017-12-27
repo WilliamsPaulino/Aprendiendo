@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cargando</title>
+	<script src='Web/JScript/JQuery.js'></script>
+</head>
+<body>
+<!-- <style>
+	#cargando{
+		transition: all .3s ease;
+		transform: rotate(45deg);
+	}
+</style> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<img src="imagenes/cargando.png" alt="cargando" id='cargando' />
+</center>
+<script>
+	$(document).ready(function(){
+		var hola = true;
+		var contador = 0;
+		var rotador = 0;
+		var carga = setInterval(function(){
+			contador++;
+			rotador -=45;
+
+			
+			$("#cargando").css("transition", "all 2.5s ease").css("transform", "rotate("+ rotador+"deg)");
+				
+
+			if(contador == 100){
+					clearInterval(carga);
+				}
+			
+			}, 150);
+		 
+
+
+
+
+
+
+	});	
+</script>
+	
+</body>
+</html>

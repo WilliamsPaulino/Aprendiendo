@@ -1,0 +1,800 @@
+*{
+	padding: 0px;
+	margin:0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: cambria;
+	color:rgba(0,0,0,.7);
+	transition:all .3s ease;
+
+}
+body{
+			background: #dae1e7;
+		}
+.visualizador{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity:.5;
+	z-index: 1000;
+	display: none;
+}
+
+.error{
+	position: absolute;
+	background-color:crimson;
+	color:white;
+	padding:3px;
+	font-family: 12px;
+	text-align: left;
+	border-radius: 3px;
+	bottom:-25px;
+
+}
+.cont_imagen_visualizada{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1500;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left:0px;
+	top:0px;
+}
+.cont_imagen_visualizada img{
+	border: solid 10px white;
+	border-radius: `10px;
+
+}
+.imagen_visualizada{
+	width:70%;
+
+}
+
+@font-face{
+	font-family: "audsong";
+	src: url('DK Motley Crew.otf');
+}
+.elegio{
+	background: #4BD831;
+	padding: 5px;
+	border-radius:3px ;
+	color:white;
+}
+
+/*Esta parte corresponde al disegno de la cabecera de la página*/
+.contenedor{
+	position: relative;
+	display: inline-block;
+	padding: 0px;
+	width:40%;
+	margin-top: 40px;
+	margin-left: 5%;
+	margin-right: 5%;
+	float: left;
+}
+.contenedor_derecho{
+	position: absolute;
+	margin-top:3.5%;
+	display: inline-block;
+	padding: 0px;
+	left:50%;
+	width:40%;
+}
+.cont_logo{
+	position:relative;
+	display:flex;
+	width:100%;
+	height:100px;
+	padding:5px;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+.tipografia{
+	position:absolute;
+	left:-26%;	
+	position: relative;
+	bottom:0px;
+	color:darkturquoise;
+	font:50px "audsong";
+	top:100%;
+	margin-top: -110px;
+	text-shadow: 0px 0px 10px #000;
+	text-decoration: none;
+}
+
+.imagen_corporativa{
+	position:absolute;
+	left:5%;
+	top:10px;
+	display: inline-block;
+	height: 100%;
+	width:8%;
+
+}
+
+
+/*Esta parte corresponde al disegno de la caja de tipos pago paypal o tarjeta*/
+
+
+
+.cont_tipos_pago{
+	position:relative;	
+	display: inline-block;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+	float:left;
+	box-shadow: 0px 0px 2px #7a7a7a;
+	transition: all .5s ease;
+	margin-bottom: 30px;
+
+
+}
+.grupo#nombre_completo{
+	width:100%;
+}
+.grupo:first-of-type{
+	width:48%;
+}
+.icon{
+	position: absolute;
+	width:40px;
+	height:20px;
+	right:0px;
+	top:25px;
+	display: none;
+}
+.cont_tipos_pago > span{
+	text-align: center;
+	font:18px "Arial Rounded MT";
+	display: block;
+	
+
+}
+
+
+.text_transaccion{
+	position: absolute;
+	top:100%;
+	display: block;
+	font:30px "Arial Rounded MT";
+	color:rgba(0,0,0,.7);
+
+}
+
+input[type='radio']{
+	visibility: hidden;
+	width:30px;
+}
+
+.radio_card_span{
+	position:relative;
+	display: inline-block;
+	width:20px;
+	margin-left: -30px;
+	height:20px;
+	border: 2px solid rgba(0,0,0,.7) ;
+	border-radius:50%;
+	margin-right: 5%;
+	cursor:pointer;	
+
+}
+
+.radio_paypal_span{
+	position:absolute;
+	display: inline-block;
+	width:20px;
+	left: 2%;
+	top:32%;
+	height:20px;
+	border: 2px solid rgba(0,0,0,.7) ;
+	border-radius:50%;
+	margin-right: 5%;
+	cursor:pointer;	
+}
+
+.paypal, .card{
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	margin-top:3%;
+	height:60px;
+	
+}
+.card{
+	display: none;
+}
+
+.lab_paypal img{
+	width:130px;
+	height: 75%;
+	cursor: pointer;
+}
+
+.lab_card img{
+	position: relative;
+	width:60px;
+	height: 75%;
+	cursor: pointer;
+}
+
+.span{
+	position: relative;
+	font-size: 100%;
+	line-height: 60px;
+	top: -8px;
+	left: 5px;
+}
+#formulario_card{
+	display: none;
+}
+#formulario_card input{
+	width:100%;
+	border:none;
+	border-bottom: 2px solid darkturquoise;
+	font-size: 	18px;
+	text-indent: 5px;
+	color:black;
+	padding-bottom: 2px;
+	display: none;
+}
+.grupo:first-of-type{
+	display: block;
+
+}
+.grupo{
+	position: relative;
+	display: inline-block;	
+	width:45%;
+	margin-bottom: 5%;
+	margin-right: 3%;
+}
+.grupo label{
+	position: relative;
+	display: block;
+	color:gray;	
+	margin-bottom: 2%;
+}
+#formulario_card input:focus{
+	outline:none;
+
+}
+
+.iconos_tarjetas{
+	position:absolute;
+	height: 60px;
+	right:0px;
+	
+	z-index: 1000;
+	display: inline-block;	
+}
+.iconos_tarjetas img{
+	display:inline-block;
+	position:relative;
+	width:50px;
+	height:45%;
+	right:0px;
+	top:0px;
+	margin-right: 3px;		
+}
+
+
+
+
+/*esta parte corresponde al diseño de la información de la persona
+*/
+
+.info_persona{
+	position:relative;
+	top:30px;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+	display: none;
+	box-shadow: 0px 0px 2px #7a7a7a;
+	margin-top: 100px;
+
+}
+.quien{
+	text-align: center;
+	width:100%;
+	display: block;
+	font:20px "Arial Rounded MT";
+}
+.cambiar{
+	color:blue;
+	cursor:pointer;
+}
+.cambiar:hover{
+	text-decoration: underline;
+
+}
+
+
+
+
+/*esta parte corresponde al diseño de la información del artículo*/
+
+.info_articulo{
+	position:relative;
+	top:50px;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+	text-align: center;
+	margin-bottom:40px;
+	margin-top: 90px;
+	box-shadow: 0px 0px 2px #7a7a7a;
+
+}
+.cont_corazon{
+	position: relative;
+	top:10px;
+	display: flex;
+	/*align-items: center;*/
+	justify-content: center;
+	margin-bottom: 10px;
+	width:40%;
+	height:35px;
+	
+}
+.corazon{
+	position: relative;
+	width:40px;
+	height:100%;
+	display: block;
+}
+.likes{
+	position: relative;
+	top:40%;
+	left:-10%;
+	width:40%;
+	height:30px;
+}
+
+
+.info_articulo span{
+	font-size: 18px;	
+	font-weight: bold;
+	font:18px "Arial Rounded MT";	
+	display: block;
+}
+
+.arriba{
+	position:relative;
+	width:100%;
+	height: 125px;
+	display:inline-block;
+}
+.arriba img{
+	position: relative;
+	width:40%;
+	margin-left: 0px;
+	height: 100%;
+	z-index: 10;
+	cursor:pointer;
+	display: inline-block;
+	float:left;
+}
+.arriba img:hover{
+	box-shadow: 0px 0px 10px darkturquoise;
+}
+.precio_desc{
+	position: absolute;
+	right:0px;
+	top:0px;
+	font-size:20px;
+}
+.nombre_desc{
+	position: relative;
+	font:50px "audsong";
+	text-align: center;
+	line-height: 125px;
+	color:darkturquoise;
+	width:40%;
+	display: inline-block;
+}
+.envio{
+	position: absolute;
+	left:3%;
+	display: block;
+}
+
+.agencia{
+	position: relative;
+	left:-10%;
+
+}
+
+.empresa{
+	position:absolute;
+	right: 2px;
+	bottom: 0px;	
+	color:gray;
+}
+li{
+	list-style: none;
+
+}
+
+
+
+
+/*esta parte corresponde al diseño de la información del artículo*/
+
+
+
+.pago_final{
+	position:relative;
+	display: inline-block;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+	text-align: center;
+	box-shadow: 0px 0px 2px #7a7a7a;
+}
+
+.cont_img{
+	display:block; 
+	width:100%;
+	height:150px;	
+}
+
+.imagenes{
+	position:relative;
+	display: flex;
+	width:100%;
+	height:100%;
+	margin-top: 20px;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.imagenes img{
+	position:absolute;
+	width:33%;
+	left:15%;
+	cursor:pointer;
+
+}
+.imagenes img:hover{
+	box-shadow: 0px 0px 10px darkturquoise;
+}
+.imagen2{
+	opacity:.5;
+	margin-left:-12%;
+	height:80%;
+	margin-top:-1%;
+}
+.imagen3{
+	opacity:.5;
+	margin-left:12%;
+	height:80%;
+	margin-top:-1%;
+}
+.imagen1{
+	z-index: 1;
+	height:100%;
+}
+.precio{
+	position: relative;
+	display: block;
+	width:100%;
+	height: 60px;
+	top:10px;
+	padding: 5px;
+	text-align: center;
+	font-size: 30px;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff) ;
+
+}
+.precio span{
+	background-color: darkturquoise;
+	border-radius: 5px;
+	padding: 3px;
+	color:white;
+}
+
+.precio_arriba{
+	position: absolute;
+	right:0px;
+	font-size: 16px;
+	font-weight: lighter;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+
+}
+.precio_arriba + .precio_arriba{
+	top:20%;
+}
+
+.precio_arriba span{
+	position: absolute;
+	right:90px;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.boton_pagar{
+	display: none;
+	width:100%;
+	height:60px;
+	padding: 10px;
+		
+}
+.boton_pagar button{
+	height:100%;
+	width:80%;
+	color:white;
+	background-color: darkturquoise;
+	font-size: 	20px;
+	cursor: pointer;
+	border-radius: 3px;
+	border:none;
+}
+.boton_pagar button.lock{
+	background-color: #9b9b9b;
+	cursor:not-allowed;
+}
+.costo_envio span{
+	color:red;
+	display: none;
+}
+
+
+/* Esta parte corresponde al diseno del formulario de cambio para datos de envio*/
+@keyframes go_center{
+	from{
+		width:0%;
+
+	}to{
+		width: 100%;
+
+		}
+}
+#form_cambio input[type='text']{
+	position: relative;
+	width:100%;
+	border:none;
+	border-bottom: 2px  solid darkturquoise;
+	outline: none;
+	margin-top:15px;
+	text-indent: 3px;
+	background-color: transparent;
+
+}
+.ejecutar_go_center{
+	animation-name: go_center ;
+	animation-fill-mode: both;
+	animation-duration: 1.5s;
+
+}
+
+#form_cambio div{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+}
+
+#form_cambio{
+	display: none;
+}
+.cambiar_btn{
+	position: relative;
+	padding: 5px;
+	font-size: 18px;
+	border-radius: 5px;
+	border:none;
+	background-color: darkturquoise;
+	text-align: center;
+	float:left;
+	color:#fff;
+	cursor:pointer;
+	display: none;
+}
+
+.cancelar{
+	color:blue;
+	cursor:pointer;
+	margin-left: 15px;
+	text-align: center;
+	font-size: 18px;
+	display: none;
+}
+.cancelar:hover{
+	text-decoration: underline;
+
+}
+
+/*Aqui empieza la codificacion de media screns para el responsive design */
+@media screen and (max-width:980px){
+	.cont_logo{
+		height:200px; 
+		align-items: none;
+	}
+	.contenedor_derecho{
+		width: 45%;
+		left:50%;
+		position: absolute;
+		margin-top:5%;
+		
+	}
+	.tipografia{
+		position: absolute;
+		left: 0px;
+		text-align: center;
+		display: block;
+		width: 100%;
+		top:-150px;
+		margin-top: 300px;
+		text-decoration: none;
+	
+		
+		
+	}
+	.imagen_corporativa{
+		position: relative;
+		top:0px;
+		width: 14%;
+		height: 60%;
+		left:0px;
+		margin-left: 50%;
+		margin-right: 50%;
+		display: block;
+	}
+	.imagenes img{
+		left:30%;
+		right: 35%;
+		width:45%;
+	}
+	.imagenes {
+		align-items: left;
+	}
+	.imagen1{
+		height: 70%;		
+	}
+	.imagen2{
+		height: 50%;
+		top:7%;
+	}
+	.imagen3{
+		height: 50%;	
+		top:7%;
+	}
+	.cont_img{
+		height: 250px
+	}
+	.precio_arriba {
+		position: absolute;
+		bottom: 0px;
+		left: 20%;
+		right: 20%;
+
+	}
+	.precio_arriba span{
+		bottom: 20%;
+		left: 0px;
+	}
+	.precio_pago_final{
+		position: relative;
+		left: 15%;
+		margin-top:142px;
+		
+	}
+	.gratis{
+		margin-left:30%;
+		margin-top: -8%;
+	}
+
+}
+
+@media screen and (max-width: 850px){
+
+	.contenedor{
+		margin-left:0%;
+		margin-right: 5%;
+		width: 50%;
+	}
+	.contenedor_derecho{
+		width: 48%;
+		left: 52%
+	}		
+
+}
+
+@media screen and (max-width: 700px){
+	img.imagen_corporativa {
+		width: 20% ;
+	}
+	.imagenes img{
+		left: 23%;
+		width:55%;
+	}
+
+
+}
+
+@media screen and (max-width: 550px){
+	.contenedor{
+		margin-left:5%;
+		margin-right: 0%;
+		width: 90%;
+	}
+	.contenedor_derecho{
+		position: relative;
+		width: 90%;
+		left: 5%;
+	}
+	.info_articulo{
+		margin-bottom: 50px;
+	}
+	.imagen_visualizada{
+		height:270px;
+	}
+
+	.imagenes img{
+		left:30%;
+		width:45%;
+		height: 
+	}
+	img.imagen_corporativa {
+		width: 35%;
+	}	
+	.cont_logo{
+		height: 230px;
+	}
+	.cont_img{
+		height: 280px;
+	}
+	.gratis{
+		margin-top: -6%;
+	}
+	.precio_pago_final{
+		margin-top: 162px;
+	}
+}
+@media screen and (max-width: 375px){
+	.contenedor{
+		margin-left:0%;
+		margin-right: 0%;
+		width: 100%;
+	}
+	.contenedor_derecho{
+		position: relative;
+		width: 100%;
+		left: 0%;
+	}
+	.imagen_visualizada{
+		width: 90%;
+		height:270px;
+	}
+	.precio{
+		font-size: 20px;
+	}
+	.boton_pagar{
+		height: 70px;
+	}
+	.boton_pagar button{
+		width:100%;
+
+
+	}
+}

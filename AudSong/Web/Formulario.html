@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Formulario de entrega</title>
+
+
+</head>
+
+<body>
+<script>
+	function validaNum(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla==8){
+
+        return true;
+    }
+        
+    // Patron de entrada, en este caso solo acepta numeros
+    patron =/[0-9||-]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
+
+</script>
+	<div id="compras" class="form_compras">
+			<h2 class="donde" align='center'>¿Adónde entregamos tu pedido?</h2>
+			<br />
+			<br />
+			<br />
+			<form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id='formulario_compras' name='formulario_compras'>
+				<div class='grupo'>
+				<input class='input_compras' type='text' id='nombre' name='nombre' maxlength="30" />
+				<label for='nombre' class='label_text label_compras'>Tu nombre completo:</label>
+				</div>
+				<br />
+				<br />			
+				<div class='grupo'>
+				<select class='input_compras' id='pais' class='paiss' name='pais'> 	
+				</select>
+				<label for='pais' class='label_text label_compras'>Pais de residencia:</label>
+				</div>
+				<br />
+				<br />
+				<div class='grupo'>
+				<input class='input_compras' type='text' id='direccion' name='direccion' maxlength="40"/>
+				<label for='direccion' class='label_text label_compras'>Dirección completa:</label>
+				</div>
+				<br />
+				<br />
+				<div class='grupo'>
+				<input class='input_compras' type='text' id='ciudad' name='ciudad' maxlength="40"/>
+				<label for='ciudad' class='label_text label_compras'>Ciudad:</label>
+				</div>
+				<br />
+				<br />
+				<div class='grupo_b '>
+				<select class='input_compras' id='provincia' name='provincia'>	
+				</select>
+				<label for='provincia' class='label_text label_compras'>Provincia, Region o Estado:</label>
+				</div>				
+				
+				<div class='grupo_b guia'>
+				<input class='input_compras' type='text' id='codigoP' name='codigop' maxlength="15" onkeypress="return validaNum(event)" />
+				<label for='codigoP' class='label_text label_compras'>Código Postal:</label>
+				</div>
+				<br />
+				<br />
+				<div class='grupo'>
+				<input class='input_compras' type='text' id='telefono' name='telefono' maxlength="15" onkeypress="return validaNum(event)"/>
+				<label for='telefono' class='label_text label_compras'>Celular o Telefono:</label>
+				</div>
+
+		
+				<input type='submit' class='lo_quiero' value='Ir completar transacción' id='lo_quiero' name='agregar' />
+			</form>
+		</div>
+	
+	<div class='fondo_difuminado' width='100%' height='100%'></div>
+
+
+<script src="../JScript/JQuery.js"></script>
+<script src="../JScript/efectos_form.js"></script>
+
+</body>
+
+</html>

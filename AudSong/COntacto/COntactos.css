@@ -1,0 +1,290 @@
+*{
+	margin:0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body{
+	background:transparent; 
+	overflow-x: hidden;
+}
+/*pasamos a crear animaciones*/
+@keyframes contact {
+	from{
+		position:absolute;
+		top:70%;
+		transform: rotate(360deg);
+
+	}to{
+		position:absolute;
+		
+	}
+}
+@keyframes FadeIn_pad{
+	from{
+		visibility: hidden;
+		opacity:0;
+	}to {
+		visibility: visible;
+		opacity:1;
+	}
+}
+.elementosOn{
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:.5s;
+	animation-duration:.5s;
+	-webkit-animation-name:FadeIn_pad;
+	animation-name:FadeIn_pad;
+}
+
+
+/*el fondo de la imagen mia*/
+.mi_img{
+	width:100%;
+	height:200px;
+}
+/*Mi imagen*/
+#YO_pad{
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	animation-name:contact;
+	-webkit-animation-duration:2s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name:contact;
+	z-index:2000;
+	position:relative;
+	top:30px;
+	left:40%;
+	margin-bottom: 15px;
+	height:200px;
+	width: auto;
+	border-radius:50%;
+	
+}
+/*todos los h2*/
+
+.info_title{
+	text-align: center;
+	color: #fff;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+/*el bloque de informacion personal*/
+#informacion_personal{
+	display: inline-block;
+	position:relative;
+	width:40%;
+	height:auto;
+	margin-left: 1%;	
+	margin-right: 8%;
+	background-color:darkturquoise;
+	text-align: left;
+	padding:15px;	
+	font-family: 'Calibri light';	
+	border-radius: 25px;
+}
+#informacion_personal > h2{
+	font-family: 'Calibri';
+}
+/*info */
+.info{
+	display: block;
+	width:50%;
+	height:100%;
+	margin-left: 57%;
+	font-size: 21px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+/*formato de la parte donde va el apellido nombre etc*/
+.referente{
+	position: absolute;
+	display:block;
+	width:40%;
+	font-weight:bold;
+	font-size: 20px;
+	color: #fff;
+}
+/*los dos puntos*/
+.puntos{
+	display: inline;
+	float: right;
+}
+/*los numeros telefonicos*/
+.num{
+	font-weight: bold;
+}
+/*buscame en*/
+.redes{
+	position: absolute;
+	top:77%;
+	width:100%;
+	font-size: 25px;	
+	text-align: center;
+	color:#fff;
+}
+/*contenedor de redes*/
+.cont_redes{
+	width:100%;
+}
+
+/*los botones para las redes*/
+.redes2{
+	position: relative;
+	background-color:#fff;
+	width: 40px;
+	height: 40px;
+	bottom:-10px;
+	border-radius:3px;
+	cursor:pointer;
+	margin-left: 15px;
+	transition: all .3s ease;
+}
+.redes2:hover{
+	transform: scale(1.1);
+}
+.acerca_de_mi{
+	display:inline-block;
+	position: relative;
+	padding: 15px;
+	width: 50%;
+	height: auto;
+	background-color: darkturquoise;
+	color: #fff;
+	font-size: 18px;
+	top:-130px; 
+	margin-bottom:10px;
+	margin-top: 10px;
+	font-family: 'Calibri light';
+	border-bottom-right-radius: 30%;
+	border-top-left-radius: 30%;
+	
+}
+.acerca_de_mi > h2{
+	font-family: 'Calibri';
+
+}
+
+
+.yo_text{
+	text-indent: 10px;
+}
+
+.acerca_title{
+	color:#fff;
+	text-align: center;
+	font-size: 30px;
+	margin
+	font-family: 'Calibri';
+
+}
+
+.intereses{
+	display:inline-block;
+	position: relative;
+	margin-top:50px;
+	padding: 15px;	
+	width: 50%;
+	height: auto;
+	background: darkturquoise;
+	color: #fff;
+	font-size: 18px;
+	left: 49%;
+	top:-175px;
+	font-family: 'Calibri light';
+	border-top-left-radius:45px ;
+	border-bottom-right-radius: 40%;
+	border-bottom-left-radius: 30px;
+}
+.intereses > h2{
+	font-family: 'Calibri';
+
+}
+.intereses:before{
+	content:"";
+	position:absolute;
+	top:0px;
+	left:0px;
+	width: 40px;
+	height: 40px;
+	background: -webkit-linear-gradient(-45deg, transparent 45%,darkturquoise 50%,#1bd8c1 60%, #e0e0e0);
+}
+
+@media screen and (max-width:1080px){
+	.intereses{
+		top:-30px;
+		left:20%;
+		margin-bottom: 15px;
+	}
+	.acerca_de_mi{
+		top:0px;
+		left: -5%;
+	}
+}
+@media screen and (max-width: 900px){
+	#informacion_personal{
+		left: 10%;
+		width:80%;
+	}
+	
+	.acerca_de_mi{
+	top:10px;
+		left:15%;
+		width:70%;
+		margin-bottom: none;
+	}
+
+	.intereses{
+		margin-top: 10px;
+		top:10px;
+		left:15%;
+		width:70%;
+		margin-bottom: 15px;
+	}
+}
+@media screen and (max-width:580px){
+	#informacion_personal{
+		margin-left: 0px;
+		width:100%;
+		left:0px;
+	}
+	.acerca_de_mi{
+		width:100%;
+		left:0px;
+	}
+	.intereses{
+		width:100%;
+		left:0px;
+	}
+}
+@media screen and (max-width:460px){
+	.referente{
+		font-size: 18px;
+	}
+	.info{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width:312px){
+	#YO_pad{
+		left:20%;
+	}
+	.referente{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:312px){
+	.referente{
+		font-size: 14px;
+	}
+	.info{
+		font-size: 14px;
+	}
+	.redes2{
+		width:30px;
+		height: 30px;
+	}
+}

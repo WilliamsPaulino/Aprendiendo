@@ -1,0 +1,2659 @@
+/*Para pner a la pagina stand sin margenes*/
+*{
+	margin:0px;
+	transition-timing-function: ease-in-out; 	
+	transition-duration: .3s;
+	transition-property: all;
+	-webkit-transition-timing-function: ease-in-out; 	
+	-webkit-transition-duration: .3s;
+	-webkit-transition-property: all;
+	-o-transition-timing-function: ease-in-out; 	
+	-o-transition-duration: .3s;
+	-o-transition-property: all;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;	
+	-ms-transition-timing-function: ease-in-out; 	
+	-ms-transition-duration: .3s;
+	-ms-transition-property: all;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;/*evitar que halla 
+problemas con el tamño de dibujo de los contenedores */
+}
+.g-plus{
+	display: none;
+}
+@keyframes aparicion{
+	from{
+		position: relative;
+		left:-1000px;
+	}to{
+		left:100%; 		
+	}
+}
+
+/*es la forma de crear una tipografia accesible a todas las pc*/
+@font-face{
+	font-family: 'AudSOng';
+	src: url('DK Motley Crew.otf');
+}
+/*aqui pasamos a darle un tamano al contenedor que abrira el formulario dee pedidos dentro de el*/
+.audifono{
+	position: absolute;
+	z-index: 4000;
+}
+.equis{
+	z-index: 3000;
+	position:absolute;
+	left: 95%;
+	top:10px;
+	font: 40px "AudSOng";
+	color: #e0e0e0;
+}
+#cod{
+	display: none;
+}
+.equis:hover{
+	transition-duration:.2s;
+	transform: scale(1.2);
+	color:darkturquoise;
+}
+#form{
+	position:absolute;
+	border:0;
+}
+#contenedor_formulario{
+	position: absolute;
+	z-index: 2000;
+	width:100%;
+	height:100%;
+	display: none;
+	background-color: rgba(0,0,0,.5);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/**/
+body{
+	position:relative;
+    background-image: Url("../../imagenes/FOndo.jpg") ;
+	background-size: 1600px 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	/*aqui accedemos a la imagen de fondo de la pagina*/
+/*	font-family: Georgia, "Times New Roman", Times, serif; /*establece fuenta a usar */
+*/	max-width: 1400px;
+	min-height: 1400px;
+	overflow-x: hidden;
+	font-family: cambria;
+}
+/*le damos styo a la descripcion del articulo*/
+.descripcion2{
+	color: rgba(0,0,0, .7);
+	text-align: center;
+	font-size: 18px;
+	position:absolute;
+	display: inline-block;
+	left: 52%;
+	right: 2%;
+	top:23%;
+    
+ 	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+}
+/* es el  fondo para el logo */
+
+.logo{
+	background-color: #e0e0e1;
+	width: 74.5%;
+	height: 100%;
+
+}
+.imagen_logo{
+	position:relative;
+	width: 74.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 	auto;
+	height: 250px;
+    background-color: #e0e0e1;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.logo2{
+	height: 70%;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:1.5s;
+	animation-duration:1.5s;
+	-webkit-animation-name:aparicion;
+	animation-name:aparicion;
+}
+/*
+/* Aui se le da caracteristicas al navigator, como fondo y eso*/
+nav{
+	position: relative;
+	background-color: #e0e0e1;
+	color:darkturquoise;
+	width: 74.5%;
+	height: auto;
+	margin-left: auto;
+	margin-right: 	auto;
+	text-shadow: 0px 0px 10px #fff;
+	
+}
+
+/*
+/* Aqui se forma los items del navigator */
+li{
+/*	text-shadow: 1px 0px 0px #1997e8;*/
+	margin-left: 25px;
+	font: 50px "AudSOng";
+	display: inline-block;
+	text-decoration: none;
+}
+li a {
+	color:darkturquoise;
+	text-decoration: none;
+}
+/*
+/*Aqui se fija el margen de la lista del navigator para la hacerlo más vistoso al usuarioi*/
+
+
+
+/*
+/*Caracteristicas de los botones del nav al pasar el mouse por encima*/
+li:hover{
+	color: #e0e0e0;
+	position: relative;
+	text-shadow: 0px 0px 10px #000;
+	transform: scale(1.2);
+	cursor: pointer;
+	
+}
+
+/*aqui estamos aplicando un nuevo esquema a el navigator para cuando se le de click a un li*/	
+.presente{
+	color: #e0e0e0;
+	position: relative;
+	text-shadow: 0px 0px 5px #43bfe3;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.presente:hover{
+	text-shadow: 0px 0px 10px darkturquoise;
+
+}
+/*--------------------------------*/
+/*  Aqui se le aplica el orden de a el esquema de Bienvenido*/
+.welcome{
+	padding-left: 15px;
+	padding-bottom: 15px;
+	margin-top: 18px;
+	background-color:darkturquoise;
+	width: 74.5%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	text-align: center;
+}
+/*---------------------------------*/
+/*Aqui Estableceremos el caracter de la bienvenida del sitio Web*/
+.Bienvenido{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 40px;
+	
+}
+/*Aqui se esquematiza el contenedor de los articulos*/
+.main_cont:first-of-type{
+    margin-top: 10px;
+	
+}
+
+.main_cont{
+	position: relative;
+/*	display:inline-block;
+*/	margin-bottom: 18px;
+	width: 74.5%;
+	height: auto;
+	margin-left:auto;
+	margin-right: auto;
+	
+	}
+    .main_cont .Productos:first-of-type{
+        margin-left:3.5px;
+    }
+/*Aqui Fijaremos el "'stylo'" y forma de los productos ofrecidos*/
+.Productos{
+	margin-top: 10px;
+	margin-left: 8px;
+	margin-bottom: 10px;
+	width: 18.8%;
+	height: 235px;
+	background-color: transparent;
+	display: inline-block;
+	color: #0099CC;
+	font-family: "Bradley Hand ITC Normal";
+	font-size: 18px;
+	border-radius: 3.4px;
+}
+.Productos span.triangle{
+	position: absolute;
+	width:0px;
+	height: 0px;
+	border-left:25px solid transparent; 
+	border-right: 25px solid transparent;
+	border-bottom: 25px solid white;
+	top:100%;
+	z-index: 6000;
+	left:30%;
+	opacity:0;
+}
+input.cant_megusta{
+	display:none;
+}
+
+/*aqui se encuentra el div donde se podrá dar click para desglozar la el contenido*/
+.clickme{
+	
+	width:100%;
+	height:75%;
+    display:none;
+	z-index: 1000;
+    background:transparent;
+    border:1px solid #000;
+}
+
+.Productos:hover .clickme{
+    position:absolute;
+	display: none;
+     border:1px solid #000;
+
+}
+
+/*Aqui se encuentra la animacion de el contenedor de todos los productos al pasarle el mouse por encima*/
+.Productos:hover{
+	box-shadow: 0px 0px 10px black;
+	transition: all .4s ease;
+	transform: scale(1.1); /*es aqui donde le cambiamos el tamaño al contenedor */
+	position: relative;
+	background-color: #fff;*/
+	
+}
+
+
+/*Aqui le devolvemos el tama;o original para cuando a descripcion esta abierta y se le pase hover*/
+.fix_trans:hover{
+	transform: scale(1);
+}
+
+
+
+/*-------------------------------------*/
+/*aqui hacemos que la imagen se adapte a su contenedor cuando se pase el mouse por encima*/
+.Productos img:hover{
+	width: 100%; 
+	height: 200px; 
+	display: inline-block;
+	border-radius: 3.4px ;
+}
+
+
+/* establecemos las propiedades iniciales del las todas las imagenes*/
+.imagen1, .imagen2, .imagen3{
+	z-index: 1000;
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	transition: none;
+	opacity:.1;
+	visibility:hidden;
+}
+/*establecemos el esquema de cada imagen mientras se va mostrando en el slideshow*/
+.mostrar{
+	position: static;
+	opacity:1;
+	transition:opacity .7s, visibility .7s;
+	visibility: visible;	
+}
+/*establecemos el esquema de cada imagen mientras se le da click a los botode de siguiente y atras*/
+.mostrar1{
+	position: static;
+	opacity:1;
+	transition:opacity 1s, visibility 1s;
+	visibility: visible;
+}
+/*establecemos el esquema de cada imagen mientras se va mostrando en el slideshow*/
+@keyframes viene {
+	from{
+		opacity:0;
+		transform: translateY(-300px);
+	}to{
+		opacity:1;
+		transform: translateY(0px);
+	}
+}
+.mostrar_n{
+	position: static;
+	opacity:1;
+	transition:opacity .7s, visibility .7s;
+	visibility: visible;
+	animation-name:viene;
+	animation-fill-mode: both;
+	animation-duration: 1s;	
+
+}
+
+/*esta es una capa invisible que se encarga de activar el slideshow cuando se activa mouseover*/
+.hover{
+	position:absolute;    
+	width: 14%;
+	height:200px;
+	visibility: hidden;
+	transition: none;
+	z-index: 5000;
+
+	
+}
+
+
+
+/*este es la forma que la capa invisivle "hover" tomara cuando el articulo crezca a activar mouseover*/
+.Productos:hover .hover{
+    width:100%;
+	visibility: visible;
+}
+.cargando{
+	position: absolute;
+	margin-top: -50%;
+	top:75%;
+	left:30%;
+	width:60px;
+	height:60px;
+	display: none;
+	transition: all 4.7s ease;
+}
+
+/*es la forma inicial que tiene la flecha atras*/
+.flecha_atras{
+    z-index:0;
+	width: 27%;
+	height: 21%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .5s ease;
+	opacity: 0;
+	visibility: hidden;
+	position:absolute;
+	top:40%;
+	left: -300px;
+	font-size: 40px;
+	text-align: center;
+	background: #fff url() 0 0 no-repeat;
+	cursor:pointer;
+	border-radius:50% ;
+}
+/*es la forma que tendra la flecha atras al activar el mouseover del producto */
+.Productos:hover .flecha_atras{
+	z-index: 7000;
+    opacity: 1;
+	visibility: visible;
+	top:40%;
+	left: -28px;
+	font-size: 40px;
+}
+/*el el esquema de la flecha atras al hacer hover*/
+.flecha_atras:hover{
+	transition: all .1s ease;
+	color: #b8b8b8;
+	text-shadow: 0px 0px 5px #fff;
+    left: -28px;
+}
+/*estableciendo una caracteristica standard de todos los nodos a o enlaces*/
+a{
+	cursor: pointer;
+}
+/*es la forma inicial que tiene la flecha siguiente*/
+.flecha_siguiente{	
+    z-index:0;
+	width: 27%;
+	height: 21%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 350px;
+	top: 40%;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 40px;
+	text-align: center;
+	background: #fff url() 0 0 no-repeat;
+	cursor:pointer;
+	border-radius: 50%;
+}
+/*el el esquema de la flecha siguiente al hacer hover*/
+.flecha_siguiente:hover{
+	transition: all .1s ease;
+	color: #b8b8b8;
+	text-shadow: 0px 0px 5px #fff;
+  
+	  
+}
+/*es la forma que tendra la flecha siguiente al activar el mouseover del producto */
+.Productos:hover .flecha_siguiente{
+	z-index: 7000;
+    transition: all .5s ease;
+	opacity: 1;
+	visibility: visible;
+	top:40%;
+	left: 86%;
+	font-size: 40px;
+}
+
+.flecha_siguiente:hover .Productos{
+	box-shadow: 0px 0px 10px red;
+	transition: all .4s ease;
+	transform: scale(1.1); /*es aqui donde le cambiamos el tamaño al contenedor */
+	position: relative;
+	background-color: #fff;*/	
+
+}
+
+/*Aqui se encuentra el esquema del contenedor del footer*/
+footer{
+	position:absolute;
+	bottom:0px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	width: 100%;
+	background-color: darkturquoise;
+	z-index: 10000;
+
+	
+}
+.referencia{
+	position:fixed;
+	bottom:0px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	width: 100%;
+	z-index: 10000;
+	height: 77px;
+
+}
+/*Aqui se encuentra el esquema de las primeras letras del footer*/
+.foote{
+	font-size:20px;
+	color: #FFFFFF;
+	text-align: center;
+}
+/*Aqui se encuentra el esquema de las segundas letras del footer*/
+.foot{
+	font-size:20px;
+	color: #FFFFFF;
+	text-align: center;
+}
+/*el el esquema de el sticky menu al hacer hover*/
+.pacha:hover{
+		transition: all .1s ease;
+		box-shadow: 0px 5px 8px rgba(0,0,0,.5);
+
+}
+/*es un pequeno retoque a los nodos li al pasar hover*/
+.text_design:hover{
+	color:#e0e0e1;
+	text-shadow: 0px 0px 10px #000;
+}
+/*aqui se le otorgan las caracteristicas a la secuencia de espera que se ejecuta antes de que empieze el 																																		slide*/
+.esperar{
+	position:absolute;
+	display: none;
+	width: 100%;
+	height:100%;
+	z-index: 1000;
+	top:0px;
+
+}
+
+
+
+@keyframes FadeIn_pad{
+	from{
+		display:none;
+		opacity:0;
+	}to {
+		display:inline-block;
+		opacity:1;
+	}
+}
+.elementosOn{
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:.5s;
+	animation-duration:.5s;
+	-webkit-animation-name:FadeIn_pad;
+	animation-name:FadeIn_pad;
+}
+@keyframes FadeOut_pad{
+	from{
+		display: block;
+		opacity:1;
+	}to {
+		opacity:0;
+		display: none;
+	}
+}
+.elementosOff{
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:.3s;
+	animation-duration:.3s;
+	-webkit-animation-name:FadeOut_pad;
+	animation-name:FadeOut_pad;
+}
+
+.ver_mas{
+	visibility: hidden;
+	opacity: 0;
+	position: relative;
+	top:-4.3%;
+	width: 100%;
+	height: 14%;
+	font-size: 125%;
+	color: darkturquoise;
+	background: -webkit-linear-gradient(top, #e8e8e8 10%, white 60%, #e8e8e8 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3%;
+
+}
+/*esquema de ver mas al hacer hover*/
+.ver_mas:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 5px #fff;
+}
+/*actitud del boton hacer mas al hacer click rapido*/
+.ver_mas:active{
+	transition: none;
+	color: #0099CC;
+	background-color: #fff;
+	box-shadow: 0px 0px 5px #fff;
+}
+/* posicion del boton ver mas al pasar el hover por el articulo*/
+.Productos:hover .ver_mas{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 1s, opacity 1s;
+}
+/*Es el esquema del cuadro que se encarga de dar la descripcion cuando aparece*/
+.cont_especial{
+	position: relative;
+	display: inline-block;
+	height: 350px;
+	margin-bottom: 50px;
+	width:100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+@keyframes turn{
+	from{ 
+		top: 50%;
+		height:1px;
+		border: 1px solid #000;
+		padding:0px;
+	}to{
+		top:0;
+		height: 100%;
+		border: none;
+		padding: 15px 15px;
+
+	}
+}
+
+@keyframes off{
+	from{ 
+		top:0;
+		height: 350px;
+		display: block;
+	}to{
+		top: 50%;
+		padding: 0px;
+		height:1px;
+		display: none;
+		
+	}
+}
+@keyframes bajar{
+	from{
+		height:350px;
+	}to{
+		height:0px;
+		display: none;
+	}
+}
+
+/*desaparecemmos todas la imagenes que estab dentro de la descripcion de articulo*/
+
+.desaparecer{
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode:both;
+	-webkit-animation-name: bajar;
+	animation-name: bajar;
+}
+.especial{
+	padding: 15px 15px;
+	position: relative;
+	display: inline-block;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+	height: 100%;
+	width:100%;
+	border-radius: 3.5px;
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode:both;
+	-webkit-animation-name: turn;
+	animation-name: turn;
+}
+/*El estilo para el anuncio espera por más*/
+.por_mas{
+	position:absolute;
+	left:85%;
+	width: 15%;
+	margin-top:18px;
+	height:500px;
+	background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+	color: darkturquoise;
+	font: 40px "AudSOng";
+	text-shadow: 0px 0px 5px #fff;
+	text-align: center;
+	padding:10% 10px 10px 10px;
+}
+.por_mas2{
+	position:absolute;
+	margin-top:18px;
+	float:right;
+	width:9.5%;
+	height:500px;
+background: -webkit-linear-gradient(#f8f8f8, #fff);
+background: -o-linear-gradient(#f8f8f8, #fff);
+background: linear-gradient(#f8f8f8, #fff);
+	color: darkturquoise;
+	font: 25px "AudSOng";
+	text-shadow: 0px 0px 5px #fff;
+	text-align: center;
+	padding:10% 10px 10px 10px;
+}
+/*desaparecemmos todas la imagenes que estab dentro de la descripcion de articulo*/
+.collage{
+	display:none;
+}
+
+
+/*hacemos que aparesca solo las que tienen esta clase */
+.collage2{
+	position: relative;
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;	
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	overflow: hidden;
+	box-shadow: 0px 5px 10px black;
+}
+#precio{
+	visibility: hidden;
+	position: absolute;
+}
+/* Le damos stylo a el nombre del articulo*/
+.nombre_aud{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	font: 60px "AudSOng";
+	text-align: center;
+	color:#43bfe3;
+	text-shadow: 0px 0px 5px #000;
+	display: inline-block;
+	width:50%;
+	height:auto;
+}
+/*destacamos el articulo al que se le abrio a descripcion*/
+.destacar{
+	transform: scale(1);
+	box-shadow: 0px 0px 20px darkturquoise;
+	background-color: #fff;
+	
+}
+.ver_mas_current{
+	visibility: visible;
+	opacity: 1;
+}
+
+.destacar:hover{
+	transform: scale(1);
+	box-shadow: 0px 0px 20px darkturquoise;
+
+}
+
+/*Le damos stylo al boton de quitar de la descripcion*/
+.quitar{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	left: 92%;
+	top:0px;
+	background: transparent;
+	font: 35px "AudSOng";
+	text-align:center;
+	width: 70px;
+	height: 70px;
+	border:none;
+	display: inline-block;
+	color: #d8d8d8;
+	text-shadow: 0px 0px 3px #000;
+}
+.quitar:hover{
+	color:darkturquoise;
+	cursor:pointer;
+	transform: scale(1.2);
+	
+}
+.quitarOff{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: off;
+	animation-name:off;
+
+}
+/*Le damos stylo al boton de me gusta de la descripcion*/
+.me_gusta{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 56.5%;
+	top: 70%;
+    cursor:pointer;
+
+}
+/*le damos stylo al texto que dice te gusta luego de clikear el boton me gusta*/
+
+.cant_megusta{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	left: 61.5%;
+	top: 73%;
+	color: #43bfe3;
+	font-size: 25px;
+	display: inline-block;
+	cursor: pointer;
+}
+.precio_art{
+	position: relative;
+	margin-left: 6%;
+	top: -3%;
+	font-size: 30px;
+	color: /*rgba(0,0,0,.7)*/#4BD831;
+	text-shadow: 5px gray;
+}
+.precio_format{
+	color:white;
+	font-size:22px;
+	padding:2px;
+	background-color: #4BD831;
+	left: 2%;
+	border-radius:3px;
+}
+/*Le damos stylo al boton de quitar de la descripcion*/
+
+.comprar{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	transition-duration: .3s;
+	position: absolute;
+	bottom:3.4%;
+	left: 72%;
+	font-size: 18px;
+	width: 120px;
+	height: 40px;
+	background-color:#43bfe5;
+	color:aliceblue;
+	border:none;
+	box-sizing: border-box;
+	padding:7px 13px 5px;
+	text-align:left;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.comprar >a{
+	color:white;
+	text-decoration: none;
+	width:100%;
+	height:100%;
+}
+
+.comprar:hover{
+	transition-duration: .3s;
+	transform: scale(1.1);
+	background: -webkit-linear-gradient(bottom,aliceblue, #43bfe5 );
+}
+/*el carrito de compra en el boton de*/
+.carrito{
+	background-color: transparent;
+	position: absolute;
+	left: 87px;
+	width: 25px;
+	heigth: 25px;
+	float:  right;
+}
+/*el boton de facebook de la descripcion*/
+.facebook{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 63%;
+	top: 70%;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.facebook:hover{
+	transform: scale(1.1);	
+}
+/*el boton de twitter de la descripcion*/
+.twitter{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 68%;
+	top: 70%;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.twitter:hover{
+	transform: scale(1.1);	
+}
+/*el boton de google+ de la descripcion*/
+.google{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 73%;
+	top: 70%;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.google:hover{
+	transform: scale(1.1);	
+}
+/*el boton de pinterest de la descripcion*/
+.pinterest{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: FadeIn_pad;
+	animation-name:FadeIn_pad;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left:78%;
+	top: 70%;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.pinterest:hover{
+	transform: scale(1.1);	
+	/*-ms-transform: scale(1.1);*/
+}
+
+
+@keyframes change{
+	from{
+		transform: translateY(-250px);
+		margin-left:150px;
+		opacity: 0;
+				
+	}to{
+		display: inline-block;
+		transform: translateY(0px);
+		margin-left:8px;
+		opacity: 1;
+
+	}
+}
+
+.cambio{
+	transition-duration: .4s;
+	animation-fill-mode:both;
+	animation-duration: .6s;
+	animation-name: change;
+	-webkit-animation-fill-mode:both;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-name: change;
+
+}
+/*el efecto para cuando se le de click dos veces al un control*/
+@keyframes lo_tienes{
+	from{
+		transform: scale(1.3);
+	}to{
+		transform: scale(1);
+	}
+}
+
+.estas_aqui{
+	transition-duration: .4s;
+	animation-fill-mode:both;
+	animation-duration: .4s;
+	animation-name: lo_tienes;
+	animation-iteration-count: 2;
+	-webkit-animation-fill-mode:both;
+	-webkit-animation-duration: .4s;
+	-webkit-animation-name: lo_tienes;	
+	-webkit-animation-iteration-count: 2;
+}
+.COntacto{
+	position: relative;
+	z-index: 2000;
+	height:1400px;
+	display: inline-block;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	display: none;
+	
+	
+}
+#iframe_contacto{
+	border: none;
+}
+@keyframes bye{
+	from{
+		opacity:1;
+		display: inline-block;
+		}to{
+		transform:translateY(-400px);
+		opacity: 0;
+		display:none;
+	}
+}
+
+.adios{
+	position:relative;
+	transition:all .4s ease;
+	animation-duration:1s;
+	animation-fill-mode: both;
+	animation-name:bye;
+	-webkit-animation-duration:1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name:bye;
+	
+}
+.codigo{
+	position: absolute;
+	display: inline-block;
+	top:3%;
+	left:3%;
+	cursor:pointer;
+	
+}
+
+.codigo2{
+	position: absolute;
+	display: inline-block;
+	top:3%;
+	left: 90%;
+	cursor:pointer;	
+}
+
+.quick_keeping{
+	position: absolute;
+	top: 200px;
+	left:27%;
+	z-index: 3000;
+	background: -webkit-linear-gradient(top,#e0e0e0 40%, #fff  50%, #e0e0e0 90%, #cbcbcb);
+	width:500px;
+	height: auto;
+	padding:25px 50px 50px 50px;
+	border-radius: 5px;
+    box-shadow: 0px 0px 10px #f5f5f5;
+    box-sizing:border-box;
+    display: none;
+
+    
+}
+
+.quick_keeping h2{
+	font:50px "AudSOng";
+	color: darkturquoise;
+	text-shadow: 0px 0px 10px #fff;
+	margin-bottom:10px;
+}
+
+.quick_keeping label{
+	font: 30px "AudSOng";
+	color: darkturquoise;
+	text-shadow: 0px 0px 8px #fff;
+	margin-bottom: 5px;
+	
+}
+
+.quick_input{
+	display: block;
+	width: 100%;
+	height:40px;
+	font: 16px "Segoe UI";
+	border: 2px solid darkturquoise;
+	border-radius: 10px;
+    text-indent: 10px;
+   
+	
+}
+.quick_textarea{
+    display: block;
+	width: 100%;
+	height:100px;
+	font: 16px "Segoe UI";
+	border: 2px solid darkturquoise;
+	border-radius: 10px;
+    text-indent: 10px;
+    margin-top: 15px;
+    
+}
+.quick_textarea:focus{
+    outline:none;
+}
+
+.quick_input:focus{
+	 outline:none;
+}
+hr{
+	color:aliceblue;
+}
+._file{
+	position:relative;
+	left:0px;
+	display: inline-block;
+	width:110px;
+	height:125px;
+	float:left;
+	background-color: #ECECEC;
+	border: 1px solid #b8b8b8;
+	border-radius: 3px;
+    z-index:-2;
+   
+	
+}
+#muestras1, #muestras2, #muestras3{
+    position:relative;
+	left:0px;
+	z-index:-1;
+	width:110px;
+	height:125px;
+	float:left;
+	background-color: black;
+	border-radius: 3px;
+    display:none;
+    
+   
+}
+
+#muestraCollage{
+    position:relative;
+	left:0px;
+	z-index:-1;
+	width:370px;
+	height:115px;
+	float:left;
+	background-color: black;
+	border-radius: 3px;
+    display:none;
+    
+}
+.cont_file{
+	width:110px;
+	margin-left: 15px;
+	
+	display: inline-block;
+	padding: 0px;
+   
+    
+
+}
+.cont_file:first-of-type{
+	margin-left: 0px;
+}
+.cont_file label{
+	margin-top: 15px;
+	display: block;
+	cursor: pointer;
+	font-size: 20px;
+}
+.cont_fileCollage{
+	width:370px;
+	
+	display: inline-block;
+	padding: 0px;
+    
+}
+.cont_fileCollage label{
+	display: block;
+	cursor: pointer;
+	font-size: 30px;
+
+}
+._file p{
+	position: absolute;
+	top:19%;
+	left:37%;
+	font: 50px "Calibri";
+	color: #c7c7c7;
+	cursor:pointer;
+	
+}
+._fileCollage{
+	position:relative;
+	display: inline-block;
+	width:370px;
+	height:115px;
+	background-color: #ECECEC;
+	border: 1px solid #b8b8b8;
+	border-radius: 3px;
+    z-index:-3;
+}
+
+._fileCollage p{
+	position: absolute;
+	top:2%;
+	left:46%;
+	font: 70px "Calibri";
+	color: #c7c7c7;
+	cursor:pointer;
+	
+
+}
+input[type=file]{
+	width:100%;
+	height:100%;
+	cursor: pointer;
+	margin: 0px;
+	opacity: 0;
+    position:absolute;
+    z-index:100;
+   
+}
+
+.quick_precio{
+	width: 75px;
+	height: 40px;
+	border: 2px solid darkturquoise;
+	border-radius: 8px;
+	margin-top: 10px;
+	font: 20px "Adobe Ming Std L";
+}
+
+.quick_precio:focus{
+	border-radius: 0px;
+}
+
+label[for=precio_prod]{
+	position: relative;
+	top: 3.5px;
+	margin-right: 3px;
+}
+
+.submit{
+	display: block;
+	width:75px;
+	height:35px;
+	background: darkturquoise;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+	font: 16px "Times New Roman";
+}
+
+.form_admin{ 
+	position:absolute;
+    display:none;
+	top:80%;
+	margin-left:auto;
+    margin-right:auto;
+	width:320px;
+	height:115px;
+	border: 1px solid #7a7a7a;
+	background-color: white;
+    font-family:"Segoe UI";
+}
+
+.form_admin hr{
+    position:relative;
+	margin-top: 30px;
+}
+
+.adminX{
+	position:relative;
+	float: right;
+	margin-top:0px;	
+	height: 100%;
+	width:50px;
+	cursor:pointer;
+ 	font-family:"Segoe UI";
+
+ }
+ #fondoX{
+ 	position:absolute;
+ 	top:0px;
+ 	left:0px;
+ 	width:100%;
+ 	height:30px;
+	background-color: #6D6B7C;
+	padding:0px 1.5px 1px 0px;    
+
+ }
+ .adminX:hover{
+     transition:none;
+     color: #fff;
+ }
+.adminX:hover{
+	background: red;
+}
+
+.adminX p{
+    cursor:pointer;
+	font-size: 25px; 
+    margin-top:-5px;
+    text-align: center;
+    transition:none;
+ 
+    }
+
+label[For=contra_admin_]{
+    position:relative;
+    margin-left:12px;
+   
+}
+.contra_admin:focus{
+    border:none;
+    outline:none;
+}
+.form_admin input, .form_admin label{
+	margin-top: 10px;
+}
+
+#envio_admin{
+    display:none;
+}
+
+#description{
+	position:absolute;
+	opacity:0;
+}
+
+#named{
+	position:absolute;
+	opacity:0;
+}
+
+.cont_pag{
+	position: absolute;
+	top:-25px;
+	display: flex;
+	justify-content: center;
+	height:25px;
+	width:100%;
+	opacity: 0;
+	visibility: hidden;
+
+
+}
+
+.cont_pag a{
+	margin-left: 15px;
+	width: 3%;
+	height: 100%;
+	background-color: darkturquoise;
+	color:white;
+	font-size: 90%;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor:pointer;
+	text-decoration: none;
+
+}
+.cont_pag a:hover{
+	opacity: .87;
+}
+
+.cont_comienzo{
+	position: absolute;
+	left:13%;
+	top:10%;
+	cursor: pointer;	
+	text-align: center;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+
+}
+
+.cont_comienzo a{
+	font-size:225% ;
+}
+.cont_comienzo a:first-of-type{
+	font-size: 350%;
+	margin-right: -10px;
+}
+
+.cont_final{
+	position: absolute;
+	right:13%;
+	top:10%;
+	cursor: pointer;	
+	text-align: center;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+}
+.cont_final a{
+	font-size: 350%;
+}
+.cont_final a:first-of-type{
+	font-size: 225%;
+	margin-right: -10px;
+}
+.cont_comienzo a,.cont_final a {
+	text-decoration: none;
+	color:white;
+
+}
+.cont_comienzo:hover, .cont_final:hover{
+	opacity: .8;
+}
+@keyframes bajar{
+	from{
+		margin-top:-200%;
+	}to{
+		margin-top:0%;
+	}
+}
+@keyframes subir{
+	from{
+		z-index: -1;
+		margin-top:200%;
+	}to{
+		margin-top:0%;
+
+	}
+}
+
+.bajar{
+	animation-name:bajar;
+	animation-fill-mode: both;
+	animation-duration: .5s;
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+	text-shadow: 0px 0px 10px gray;
+}
+
+.subir{
+	animation-name:subir;
+	animation-fill-mode: both;
+	animation-duration: .7s;
+	visibility: visible;
+	opacity: 1;
+}
+.actual{
+	box-shadow: 2px 3px 10px rgba(0,0,0,.7);
+	border-bottom: 3px solid #fff;
+
+}
+
+.menu_celulares{	
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	color:white;
+	background-color: #e0e0e1;
+
+}
+.menu{
+	width: 30%;
+	text-align: center;
+}
+.menu p + p{
+	color:darkturquoise;
+	text-shadow: 0px 0px 10px  #fff ;
+	transform: rotate(90deg);
+	font-size: 30px;
+	margin-top: -15px;
+}
+.cookies{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: darkturquoise;
+	color:white;
+	padding: 0.3%;
+	display: inline-block;
+	z-index: 100000;
+
+
+}
+.acept_cookies{
+	border: none;
+	padding: 10px;
+
+	color:white;	
+	background-color: #43bfe3;
+	font-size: 80%;
+	border-radius:5px;
+	cursor: pointer;
+	box-shadow: -1px 3px 3px #000;
+	margin-top: 5px;
+
+}
+.politicas{
+	font-size: 80%;
+}
+
+.compartir{
+	position: fixed;
+	left:0px;
+	display: flex;
+	align-items: center;
+	width:60px;
+	height: 170px;
+	top:-70%;
+	margin-top: 50%;
+	background-color: #fff;
+}
+.compartir div{
+	position: relative;
+	width: 100%;
+	height: auto;
+	border-radius: 3px;	
+}
+.twitter2:hover, .facebook2:hover, .pinterest2:hover, .google2:hover{
+	transform: scale(1.2);
+	z-index: 1000;
+
+}
+/*redes sociales del body*/
+.twitter2, .facebook2, .google2, .pinterest2{
+	display: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+
+/*Aqui'' '''''-------------------<El diseno ese para todo dispositivo "Responsive Design"-------------'''''''----------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1270px){ /* Estructura Por debajo de 1270px*/
+	li{
+		font-size: 45px; 
+	}
+	.Productos{
+		width: 18%;
+	}
+	
+
+.descripcion2{
+	font-size:18px;
+}
+	.nombre_aud{
+		font-size: 40px;
+	}
+    .hover{
+        width:14%;
+    }
+}
+@media screen and (max-width: 1150px){/* Estructura Por debajo de 1150px*/
+	li{
+		font-size: 38px;
+	}
+    .hover{
+        width: 13.5%;
+    }
+    .cant_megusta{
+    	left:62%;
+    }
+}
+@media screen and (max-width: 980px){/* Estructura Por debajo de 980px*/
+	.por_mas{
+		display:none;
+	}
+	@keyframes bajar{
+		from{
+			margin-top: 200%;
+			z-index: -1;
+		}to{
+			margin-top: -3.5%;
+			
+		}
+	}
+	.por_mas2{
+		display:none;
+	}
+	.logo{
+		height: 120px;
+
+	}
+    .hover{
+        width:17%;
+    }
+	#Inicio{
+		margin-left: 70px;
+	}
+	#HeadPhones{
+		margin-left: 50px;
+	}
+	li{
+		font-size: 55px;
+	}	
+	.Productos{
+		width: 23%;
+	}
+	
+	.nombre_aud{
+		font-size: 35px;
+	}
+	
+}
+@media screen and (max-width: 890px){/* Estructura Por debajo de 870px*/
+	.precio_art{
+		font-size:20px;
+	}
+	.descripcion2{
+		font-size:16px;
+	}
+	.cant_megusta{
+		top:72.5%;
+		font-size: 20px;
+	}
+	.facebook{
+		width:30px;
+		height:30px;
+	}
+	.twitter{
+		width:30px;
+		height:30px;
+	}
+	.google{
+		width:30px;
+		height:30px;
+	}
+	.pinterest{
+		width:30px;
+		height:30px;
+	}
+	.me_gusta{
+		width:30px;
+		height:30px;
+	}
+	.twitter_anim{
+		left:50%;
+	}
+}
+@media screen and (max-width: 800px){/* Estructura Por debajo de 800px*/
+
+	li{
+		font-size: 45px;
+	}
+	.facebook_anim{
+		left:65%;
+	}
+	.Productos{
+		width: 22%;
+	
+	}
+    
+    .hover{
+        width:16.5%;
+    }
+	
+}
+
+@media screen and (max-width:755px){/* Estructura Por debajo de 675px*/
+	@keyframes turn2{
+	from{ 
+		top: 50%;
+		height:1px;
+		border: 1px solid #000;
+	}to{
+		top:0;
+		height: 100%;
+		border: none;
+
+	}
+}/*
+.collage2{
+	margin-top: 15%;
+	height: 70%;
+}*/
+.menu_celulares{
+	display: flex;
+}
+@keyframes off2{
+	from{ 
+		top:0;
+		height: 275px;
+		display: block;
+	}to{
+		top: 50%;
+		padding: 0px;
+		height:1px;
+		display: none;
+		
+	}
+}
+
+
+	.hover{
+        height: 85%;
+        width:22%;
+    }
+	.cont_especial{
+		height: 270px;
+	}
+	
+	.especial{
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		animation-duration: .3s;
+		-webkit-animation-duration: .3s;
+		-webkit-animation-name: turn2;		
+		animation-name: turn2;
+
+	}
+	.quitarOff{
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-name: off2;
+	animation-name:off2;
+
+}
+
+	.main_cont{
+		width:100%;
+		margin:0px;
+	}
+	.welcome{
+		width:100%;
+		margin:0px;
+	}
+	nav{
+		width:100%;
+		margin:0px;
+	}
+	ul{
+		display: none;
+		margin-left: 0px;
+		left:0px;
+	}
+	nav ul li, nav ul li a{
+		display: block;
+		text-align: center;
+		width: 100%;
+		left:0px;
+		margin-left:0px;
+	}
+	 #Inicio{
+		margin-left:0px;
+	 }
+	 #HeadPhones{
+		margin-left:0px;
+	 }
+
+	/*#Inicio{
+		display: none;
+		margin-left: 110px;
+	}
+	#HeadPhones{
+		display: none;
+		margin-left: 40px;
+	}
+	#COntactos{
+		display: none;
+		margin-left: 80px;
+	}
+	#Peticiones{
+		display: none;
+	}*/
+	
+	.Productos{
+		width: 23%;
+		height: 235px;
+	}
+	
+	
+	
+	.Productos:hover .flecha_atras{
+		font-size: 35px;
+	}
+	.flecha_atras:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}
+	.Productos:hover .flecha_siguiente{
+		font-size: 35px;
+		left: 84%;
+		
+	}
+	.flecha_siguiente:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;
+	
+	}
+	
+	.foot{
+		font-size: 18px;
+	}
+	.foote{
+		font-size: 18px;
+	}
+
+.facebook_anim{
+		left:62%;	
+}
+.twitter_anim{
+	left:63%;
+}
+.google_anim{
+	left:64%;
+}
+.pinterest_anim{
+	left:65%;
+	}
+	.imagen_logo{
+		margin-left:0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width:100%;
+		height: 250px;
+		float: left;
+	}
+	.logo{
+		width:100%;
+		height: 205px;
+	}
+
+	@keyframes bajar{
+		from{
+			margin-top: 200%;
+			z-index: -1;
+		}to{
+			margin-top: -10%;
+
+			
+		}
+	}
+
+	.cont_comienzo{
+		left:15%;
+	}
+	.cont_final{
+		right:15%;
+	}
+	
+}
+
+@media screen and (max-width:610px){/*La Posiciojn y tama;o de elementos despues de 610px*/
+		
+	
+	.cargando{
+		margin-top: -50%;
+		top:50%;
+		left:25%;
+	
+	}
+	.cont_pag a{
+		width:7%;
+	}
+}
+@media screen and (max-width:560px){/* Estructura Por debajo de 543px*/
+	.fote{
+		font-size: 16px;
+	}
+	.foot{
+		font-size: 16px;
+	}
+	.welcome2{
+		font-size: 14px;
+	}
+	.Bienvenido{
+		font-size: 30px;
+	}
+	.me_gusta{
+		margin-top:3%;
+	}
+	.facebook{
+		margin-top:3%;
+	}
+	.google{
+		margin-top:3%;
+	}
+	.twitter{
+		margin-top:3%;		
+	}
+	.cant_megusta{
+		margin-top:1.5%;
+		margin-left: 5%;	
+	}
+	
+	.foote{
+		font-size: 14px;
+	}
+	.foot{
+		font-size:14px;
+	}
+	.logo{
+		height: 125px;
+		
+	}
+
+	.Productos{
+		width: 30%;
+		height: 185px;
+	}
+	.imagenes{
+		height:150px;
+	}
+	
+	.hover{
+        height: 85%;
+        width:30%;
+    }
+    
+	.Productos:hover .flecha_atras{
+		font-size: 35px;
+	}
+	.flecha_atras:hover{
+		transition:none;
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}
+	.Productos:hover .flecha_siguiente{
+		font-size: 35px;
+		left: 86%;
+		
+	}
+	.flecha_siguiente:hover{
+		transition:none;
+		color: dodgerblue;
+		text-shadow: 0px 0px 20px #fff;	
+	}
+	
+.quitar{
+	font-size:35px;
+	top:-10px;
+	left:86%;
+}
+	
+.cont_especial{
+	height: 330px;
+}
+.descripcion2{
+	top:18%;
+
+}	
+
+@keyframes bajar{
+		from{
+			margin-top: 200%;
+			z-index: -1;
+		}to{
+			margin-top: -13%;
+
+			
+		}
+	}
+
+.cont_final{
+	right:10%;
+}
+}
+@media screen and (max-width:425px){/* Estructura Por debajo de 425px*/
+		.ver_mas{
+			font-size: 14px;
+		}
+	
+    
+    .hover{
+        height: 85%;
+        width:28%;
+    }
+	li{
+		font-size: 35px;
+		margin-left: 15px;
+	}
+	.Productos{
+		width: 28%;
+		height: 160px;
+	}
+	.imagenes{
+		height:140px;
+	}
+	
+	 
+	
+	.Productos:hover .flecha_atras{
+		font-size: 35px;
+	}
+	.flecha_atras:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}
+	.Productos:hover .flecha_siguiente{
+		font-size: 35px;
+		left: 77%;
+		
+	}
+	.flecha_siguiente:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;
+	}
+	.main_cont{
+		padding-left: 0px;
+	}
+	
+	.foote{
+		font-size: 12px;
+		
+	}
+	.foot{
+		font-size: 14px;
+	}
+}
+	
+
+@media screen and (max-width:379px){/* Estructura Por debajo de 379px*/
+
+	.foote{
+		font-size: 12px;
+	}
+	.foot{
+		font-size:12px;
+	}
+	.Productos{
+		width: 10%;
+		height: 160px;
+	}
+	.descripcion2{
+
+	}
+	.descripcion{
+		font-size: 5px;
+	}
+	
+		
+	.Productos:hover .flecha_atras{
+		font-size: 35px;
+	}
+	.flecha_atras:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}
+	.Productos:hover .flecha_siguiente{
+		font-size: 35px;
+		left: 77%;
+		
+	}
+	.flecha_siguiente:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}
+	.flecha_siguiente{
+		margin-left: 5%;
+			
+	}
+	.flecha_atras{
+		margin-left: 15%;
+	}
+	.Productos{
+		margin-left: 5px;
+	}
+	
+	.cont_comienzo{
+		left:10%;
+		font-size: 12px;
+	}
+	.cont_final{
+		right:5%;
+		font-size: 12px;
+	}
+	@keyframes bajar{
+		from{
+			margin-top: 200%;
+			z-index: -1;
+		}to{
+			margin-top: -15%;
+
+			
+		}
+	}
+	.descripcion2{
+		font-size: 85%;
+	}
+
+}
+@media screen and (max-width:325px){/* Estructura Por debajo de 325px*/
+	.foot{
+		font-size: 10px;
+	}
+    
+	.foote{
+		font-size: 10px;
+	}
+	
+	.logo{
+		height:75px;
+		
+	}
+	.Bienvenido{
+		font-size: 100%;
+	}
+	
+	
+	.Productos:hover .flecha_atras{
+		font-size: 25px;
+	}
+	
+	.flecha_atras:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}
+	.Productos:hover .flecha_siguiente{
+		font-size: 25px;
+		left: 60%;
+		
+	}
+	.flecha_siguiente:hover{
+		color: dodgerblue;
+		text-shadow: 0px 0px 10px #fff;	
+	}	
+	.Productos{
+		margin-left: 0px;
+
+	}
+	@keyframes bajar{
+		from{
+			margin-top: 200%;
+			z-index: -1;
+		}to{
+			margin-top: -19%;
+
+			
+		}
+	}
+	.cont_comienzo{
+		font-size: 10px;
+
+	}
+	.cont_final{
+		font-size: 10px;
+	}
+
+	
+}
+/*-------------------------Finalizo el Proceso de Responsive Design---------------------------------------*/
+/* posicion inicial de el boton ver mas de cada articulo*/
+
+/*la animacion del boton de facebook de la descripcion*/
+@keyframes facebook_icon{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(65px);
+		}
+	}
+.facebook_anim{
+			
+			left: 65%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name: facebook_icon;
+			animation-name: facebook_icon;		
+}
+
+/*regreso al estado inicial de google en la descripcion luego de dar me gusta*/
+	@keyframes facebook_come{
+		from{
+			transform:translate(65px);
+		}
+		to{
+			transform:translate(0px);
+		}
+	}
+
+.come_facebook{
+
+	transition-duration: .5s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: facebook_come;		
+	-webkit-animation-name: facebook_come;		
+
+}
+.come_facebook:hover{
+	transform: none;	
+}
+
+/*el boton de twitter de la descripcion*/
+	@keyframes twitter_icon{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(95px);
+		}
+	}
+.twitter_anim{
+			left: 67%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name: twitter_icon;		
+			animation-name: twitter_icon;		
+}
+.twitter_anim:hover{
+	transform: none;	
+}
+
+/*regreso al estado inicial de twitter en la descripcion*/
+	@keyframes twitter_come{
+		from{
+			transform:translate(95px);
+		}
+		to{
+			transform:translate(0px);
+		}
+	}
+
+.come_twitter{
+	transition-duration: .5s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: twitter_come;		
+	-webkit-animation-name: twitter_come;		
+
+}
+.come_twitter:hover{
+	transform: none;	
+}
+
+/*animacion pade la descripcion*/
+	@keyframes google_icon{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(125px);
+		}
+	}
+.google_anim{
+			left: 69%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			animation-name: google_icon;
+			-webkit-animation-name: google_icon;
+}
+.google_anim:hover{
+	transform: none;	
+}
+
+/*regreso al estado inicial de google en la descripcion*/
+	@keyframes google_come{
+		from{
+			transform:translate(125px);
+		}
+		to{
+			transform:translate(0px);
+		}
+	}
+
+.come_google{
+	transition-duration: .5s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: google_come;		
+	-webkit-animation-name: google_come;		
+
+}
+.come_google:hover{
+	transform: none;	
+}
+
+/*animacion para el icono de pinterest de la descripcion*/
+	@keyframes pinterest_icon{
+		from{
+			transform:translate(0px);
+		}
+		to{
+			transform:translate(155px);
+		}
+	}
+.pinterest_anim{
+			left: 71%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			animation-name: pinterest_icon;		
+			-webkit-animation-name: pinterest_icon;		
+}
+.pinterest_anim:hover{
+	transform: none;	
+}
+
+/*regraso de estado inicial de pinterest en la descripcion*/
+	@keyframes pinterest_come{
+		from{
+			transform:translate(155px);
+		}
+		to{
+			transform:translate(0px);
+		}
+	}
+
+.come_pinterest{
+	transition-duration: .5s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: pinterest_come;		
+	-webkit-animation-name: pinterest_come;		
+
+}
+.come_pinterest:hover{
+	transform: none;	
+}
+/*Aqui empieza otra seccion de responsive design don't worry be happy-----------------------------------------------------*/
+@media screen and (max-width: 542px){
+
+	
+	.facebook{
+		width:25px;
+		height:25px;
+		margin-left: 10px;
+	}
+	.twitter{
+		width:25px;
+		height:25px;
+		margin-left: 10px;
+	}
+	.google{
+		width:25px;
+		height:25px;
+		margin-left: 10px;
+	}
+	.pinterest{
+		width:25px;
+		height:25px;
+		margin-left: 10px;
+	}
+	.me_gusta{
+		width:25px;
+		height:25px;
+		margin-left: 10px;	
+	}
+	.cant_megusta{
+		font-size: 16px;
+		left:62%;
+	}
+	.precio_format{
+		left:0px;
+	}
+}
+@media screen and (max-width:660px){/* aqui estan las dimensiones de la pagina al estar bajo los 660px*/
+	
+	
+	.carrito{
+		margin-left: -10px;
+	}
+
+	.red_social{
+		top: 73%;
+	}
+	.me_gusta{
+		top: 73%;
+	}
+	.cant_megusta{
+		left:60%;
+		top: 77%;
+	}
+	.precio_art{
+		top:2%;
+	}
+	.Productos{
+		width: 31%;
+		height:250px;
+	}
+	.imagenes{
+		height:85%;
+	}
+	.hover{
+		height:85%;
+	}
+	.COntacto.main_cont{
+		width: 100%;
+		margin-left: -5px;
+	}
+	.logo{
+		width:100%;
+		height: 220px;
+	}
+
+@keyframes facebook_icon2{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(45px);
+		}
+	}
+.facebook_anim{
+			
+	
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name: facebook_icon2;
+			animation-name: facebook_icon2;		
+}
+/*el boton de twitter de la descripcion*/
+	@keyframes twitter_icon2{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(67px);
+		}
+	}
+.twitter_anim{
+			left: 67%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name: twitter_icon2;		
+			animation-name: twitter_icon2;		
+}
+	@keyframes google_icon2{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(88px);
+	
+		}
+	}
+.google_anim{
+			left: 69%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			animation-name: google_icon2;
+			-webkit-animation-name: google_icon2;
+}
+@keyframes pinterest_icon2{
+		from{
+			transform:translate(0px);
+		}
+		to{
+			transform:translate(122px);
+		}
+	}
+.pinterest_anim{
+			left: 69%;
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			animation-name: pinterest_icon2;		
+			-webkit-animation-name: pinterest_icon2;
+	}
+	.Welcome{
+		font-size: 120%;
+	}
+	.Bienvenido{
+		font-size:300%;
+	}
+	.cont_especial{
+		height: 345px;
+	}
+	.cant_megusta{
+		margin-top:-1%;
+		margin-left: 2%;
+	}
+	.comprar{
+		top: 88%;
+		text-align: left;
+		padding: 5px 7px;
+		width:110px;
+		height: 30px;
+		border-radius: 5px;
+		
+	}
+	.descripcion2{
+
+		margin-top: -3%;
+	}
+}
+
+@media screen and (max-width: 451px){ 
+	
+	
+	
+	@keyframes facebook_icon3{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(20px);
+			
+		}
+	}
+.facebook_anim{
+			
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name: facebook_icon3;
+			animation-name: facebook_icon3;		
+}
+/*el boton de twitter de la descripcion*/
+	@keyframes twitter_icon3{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(30px);
+			
+		}
+	}
+.twitter_anim{
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name: twitter_icon3;		
+			animation-name: twitter_icon3;		
+}
+	@keyframes google_icon3{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(30px);
+			
+		}
+	}
+.google_anim{
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			animation-name: google_icon3;
+			-webkit-animation-name: google_icon3;
+}
+@keyframes pinterest_icon3{
+		from{
+			transform: translate(0px);
+		}
+		to{
+			transform:translate(25px);
+			
+		}
+	}
+.pinterest_anim{
+			transition-duration: .5s;
+			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+  			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			animation-name: pinterest_icon3;		
+			-webkit-animation-name: pinterest_icon3;
+	}
+
+
+.quitar{
+		font-size: 30px;
+		left: 87%;
+		top:-15px;
+	}	
+	.descripcion2{
+		margin-top: -2%;
+
+	}
+/*	.precio_art{
+		top:0%;
+		left: 10%;
+		font-size: 15px;
+	}
+*/	.cant_megusta{
+		left:57%;
+		top:80%;
+	}
+	.me_gusta{
+		left:50%;
+	}
+	
+	.twitter{
+		left:70% ;
+	}
+	.google{
+		left:78% ;
+	}
+	.pinterest{
+		left:85% ;
+	}
+
+	.precio_art{
+		margin-left:2%;	
+		margin-top: -7%;
+	}
+}
+/*ya acabo el responsive design no tobul men que pasa-----------------------*/
+
+/*sequimpos trabajando y creamos la animacion para los articulos cuando se le de click al control bluetooth*/

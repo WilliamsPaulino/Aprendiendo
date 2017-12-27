@@ -1,0 +1,386 @@
+*{
+			transition: all .3s ease;
+			margin:0px;
+			font-family: "sitka";
+			font-weight: normal;
+		}
+		@font-face{
+			font-family: 'AudSOng';
+			src: url('DK Motley Crew.otf');
+		}
+		
+
+		@keyframes FadeIn_pad{
+			from{
+				visibility: none;
+				opacity:0;
+			}to{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		@keyframes FadeOut_pad{
+			from{
+				display:inline-block;
+				opacity:1;
+				visibility: hidden;
+			}to{
+				display: none;
+				opacity: 0;
+			}
+		}
+		body{
+			background: #dae1e7;
+		}
+		.form_compras{
+			position:relative;
+			padding: 40px;
+			background-color: #fff;
+			box-shadow: 0px 0px 5px gray;
+			top:0px;
+			width:50%;
+			height:auto;
+			margin-right:auto;
+			margin-left:auto;
+			border-radius: 3.4px;
+			box-sizing: border-box;
+			margin-bottom: 30px;
+		}
+		
+		.grupo{
+			position:relative;
+			width:100%;
+			height:auto;
+			margin-bottom: 32px;
+		}
+		.grupo_b{
+			position:relative;
+			display: inline-block;
+			width:64%;
+		
+			height:auto;
+			margin-bottom: 32px;
+		}
+		.grupo_b.guia{
+			margin-left: 5%;
+			width:30%;
+		}
+		
+		.input_compras{
+			position: relative;
+			width:100%;
+			top:50%;
+			outline: none;
+			border: none;
+			border-bottom: 2px solid darkturquoise;
+			bottom: 0px;
+			right: 0px;
+			font-size: 20px;
+			text-indent: 10px;
+		}
+		
+
+		
+		
+		.radio_compras{
+			width: 0px;
+			height:0px;
+		}
+		.label_text{
+			position:absolute;
+			bottom: 8px;
+			left:0px;
+			
+		}
+		.label_compras{
+			color: dodgerblue;
+			font-size: 20px;
+		}
+		.POMARAY{
+			text-align: center;
+			display: block;
+			margin-bottom: 15px;
+		}
+		.recreo{
+			margin-left: 22%;
+			display: block;
+			margin-bottom: 20px;
+		}
+		
+		#recreo1{
+			margin-left: 7%;
+		}
+		#si{
+			margin-left: 24%;
+		}
+		.label_radio{
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			-webkit-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			padding: 10px 10px 10px 51px;
+
+		}
+		.label_radio:hover{
+			background-color:#e0e0e0;
+			border-radius: 3px;
+		}
+		.label_radio:before{
+			content:"";
+			position:absolute;
+			bottom:10px;
+			left: 17px;
+			background:transparent;
+			width:20px;
+			height:20px;
+			border-radius:50%;
+			border: 2px solid dodgerblue;
+			display: inline-block;
+			
+		}
+		.error{
+			color: crimson;
+		
+		}
+		.error2{
+			border-bottom: 2px solid crimson;
+		}
+		
+		.radio_compras:checked + .label_radio:before{
+			display: none;
+		}
+		.radio_compras:checked + .label_radio{
+			background-color:chartreuse;
+			padding: 10px 10px 10px 10px;
+			border-radius: 3px;
+			color:aliceblue;
+		}
+		.escribiendo{
+			color: #b8b8b8;
+			position:absolute;
+			left:-10px;
+			bottom: 30px;
+			font-size: 15px;
+		}
+		.lo_quiero{
+			text-align: center;
+			padding: 10px 10px 10px 10px;
+			width: 100%;
+			height:auto;
+			background:-webkit-linear-gradient(top, darkturquoise, #00BFFF);
+			color: #fff;
+			border:none;
+			font: 25px "roboto";
+			border-radius: 3px;
+			cursor:pointer;
+		}
+		.lo_quiero:hover{
+			background:-webkit-linear-gradient(top, darkturquoise, aliceblue);
+		}
+		.oculto{
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			-webkit-animation-duration: .8s;
+			animation-duration: .8s;
+			-webkit-animation-name: FadeOut_pad;
+			animation-name: FadeOut_pad;
+			display: none;
+		}
+		.oculto2{
+			
+			display: none;
+		}
+		.mostrar{
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			-webkit-animation-duration: .8s;
+			animation-duration: .8s;
+			-webkit-animation-name: FadeIn_pad;
+			animation-name: FadeIn_pad;
+			display: inline-block;
+		}
+		.aviso{
+			z-index: 3000;
+			position: relative;
+			top: 70px;
+			width: 600px;
+			height: 200px;
+			box-shadow: 0px 0px 5px grey;
+			padding: 10px;
+			background: -webkit-linear-gradient(top, #f8f8f8, #fff);
+			box-sizing: border-box;
+		}
+		.icono_fb{
+			position:absolute;
+			top:50%;
+			left:73%;
+			display: inline-block;
+			width:32px;
+			height:32px;
+		}
+		.icono_instagram{
+			position:absolute;
+			top:50%;
+			left:58%;
+			display: inline-block;
+			width:32px;
+			height:32x;	
+		}
+		.okay{
+			position:absolute;
+			top:81%;
+			left:82%;
+			width: 100px;
+			height: 30px;
+			font-size: 16px;
+			background-color:#43bfe5;
+			color:aliceblue;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		.texto{
+			position: absolute;
+			top:15px;
+			color: rgba(0,0,0, .8);
+			text-indent: 10px;
+			font-size: 20px;
+		}
+		.informacion{
+			position: absolute;
+			top:47%;
+			color: darkturquoise;
+			font-size: 20px;
+			font-weight: 5px;
+		}
+		.nuestro{
+			position: absolute;
+			left: 55%;
+			top: 38%;
+			color: grey;
+			font-weight: bold;
+			font: 18px "roboto";
+
+		}
+		.nuestro2{
+			position: absolute;
+			left: 71%;
+			top: 38%;
+			color: grey;
+			font-weight: bold;
+			font: 18px "roboto";
+
+	}
+	.gracias{
+		transition: all .3s ease;
+		position:relative;
+		width: 150px;
+		top: 90px;
+		padding:10px;
+		color:aliceblue;
+		background-color: darkturquoise;
+		border-radius:3px;
+		cursor: pointer;
+	}
+	.gracias:hover{
+		background-color: #43fbe5;	
+	}
+	
+	.emoticon{
+		width:30px;
+		height:30px;
+	}
+	.h1{
+		color: darkturquoise;
+	}
+	.h2{
+		margin-top:150px;
+		text-align: center;
+		font-size: 100px;
+		color: darkturquoise;
+
+	}
+	#aparece{
+		display: none;
+	}
+	.donde{
+		color:dodgerblue;
+		font-weight: normal;
+
+	}
+
+	#cont_logo{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		display:flex;
+		justify-content: center;
+		height: 175px;
+		box-sizing: border-box;
+	}
+	.logo_compras{
+		margin-top: 10px;
+		width:35%;
+		height: 100%;
+	}
+
+	.audsongs_text{
+		margin-top: 5px;
+		position:relative;	
+		width:100%;
+		text-align: center;
+		margin-bottom: 20px;
+		
+	}
+	.audsongs_text strong{
+		font:50px "Arial Rounded MT";
+		color:#7a7f83;
+	}
+
+	
+	@media screen and (max-width: 1200px){
+		.form_compras{
+			width:70%;
+		}
+	}
+	@media screen and (max-width: 950px){
+		#cont_logo{
+			height:125px;
+		}
+		.audsongs_text strong{
+			font-size: 35px;
+		}		
+	}
+	
+	@media screen and (max-width: 700px){
+		.form_compras{
+			width:90%;
+		}
+		#cont_logo{
+			height:100px;
+		}
+		.audsongs_text strong{
+			font-size: 30px;
+		}
+
+
+	}
+
+	@media screen and (max-width: 580px){
+		.form_compras{
+			width:100%;
+		}
+	}
+	@media screen and (max-width: 500px){
+		.grupo_b.guia{
+			margin-left: 3%;
+			width:30%;
+		}
+		.grupo_b{	
+			width:60%;
+		}		
+	}
+
+

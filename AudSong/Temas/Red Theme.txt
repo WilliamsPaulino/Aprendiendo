@@ -1,0 +1,8 @@
+	$("nav").css("color", "red");
+				$(".welcome").css("background", "-webkit-radial-gradient(center,ellipse,#f08b8b , #e20808)");
+				$(".welcome").css("border", "3px solid #b8b8b8");
+				$("footer").css("border", "3px solid #b8b8b8"); 
+				$("footer").css( "background", "-webkit-radial-gradient(center,ellipse, #f08b8b, #e20808)");
+				$(".logo").attr("src", "imagenes/logo4.png").addClass("logo2");
+				$(".presente").css("color", "aliceblue");
+				$(".presente").css("text-shadow", "0px 0px 5px #e20808");
